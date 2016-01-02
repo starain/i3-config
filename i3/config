@@ -12,7 +12,7 @@
 # Setups
 # key - super
 # Deps:
-#   - urxvt for term
+#   - urxvt for term, make sure it's showing 256 colors correctly: http://www.vim.org/scripts/script.php?script_id=1349
 #   - Google Chrome for browser
 #   - xautolock for screen locker
 set $mod Mod4

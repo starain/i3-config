@@ -1,0 +1,36 @@
+! http://superuser.com/questions/512138/urxvt-bold-colors-are-wrong-bold-0-7-are-using-colors-from-8-15
+URxvt.intensityStyles: false
+URxvt.depth          : 32
+XTerm.termName       : xterm-256color
+
+
+! Zenburn color
+URxvt*background: #3f3f3f
+URxvt*foreground: #dcdccc
+URxvt*underlineColor: #f0dfaf
+URxvt*cursorColor: #dcdccc
+URxvt*colorUL: #366060
+
+URxvt.color0: #3f3f3f
+URxvt.color8: #2b2b2b
+
+URxvt.color1: #ac7373
+URxvt.color9: #8c5353
+
+URxvt.color2: #7f9f7f
+URxvt.color10: #9fc59f
+
+URxvt.color3: #dfaf8f
+URxvt.color11: #f0dfaf
+
+URxvt.color4: #7cb8bb
+URxvt.color12: #4c7073
+
+URxvt.color5: #dc8cc3
+URxvt.color13: #cc9393
+
+URxvt.color6: #93e0e3
+URxvt.color14: #8cd0d3
+
+URxvt.color7: #dcdccc
+URxvt.color15: #656555

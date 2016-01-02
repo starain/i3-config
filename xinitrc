@@ -1,3 +1,5 @@
 if [ -s ~/.Xmodmap ]; then
     xmodmap ~/.Xmodmap
 fi
+
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
