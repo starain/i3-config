@@ -4,6 +4,10 @@ URxvt.depth          : 32
 XTerm.termName       : xterm-256color
 ! Get control + shift works again
 URxvt.iso14755       : false
+URxvt.saveLines      : 4096
+
+URxvt.font           : xft:bitstream vera sans mono:size=12:antialias=true
+URxvt.boldFont       : xft:bitstream vera sans mono:bold:size=12:antialias=true
 
 ! Zenburn color
 URxvt.background     : #3f3f3f
