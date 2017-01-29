@@ -1,0 +1,3 @@
+#!/bin/sh
+[[ -f ~/.xinitrc ]] && ~/.xinitrc
+/usr/bin/i3 -c $HOME/.i3/config
