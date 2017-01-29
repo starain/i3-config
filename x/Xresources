@@ -27,5 +27,3 @@ URxvt.url-select.underline   : true
 
 URxvt.font           : xft:bitstream vera sans mono:size=12:antialias=true
 URxvt.boldFont       : xft:bitstream vera sans mono:bold:size=12:antialias=true
-
-#include ".config.zhangyi/i3-config/x/xresources/zenburn"

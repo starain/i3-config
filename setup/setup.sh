@@ -34,15 +34,15 @@ install() {
         fi
     done
 
-    if [ ! -d "$HOME/.urxvt" ]; then
-        mkdir "$HOME/.urxvt"
+    if [ ! -d "$HOME/.urxvt/ext" ]; then
+        mkdir -p "$HOME/.urxvt/ext"
     fi
     for f in $(echo $URXVT_EXT)
     do
         if [ -f "$CONFIG_DIR/urxvt/ext/urxvt-perls/$f" ]; then
             echo "Setting up $f"
 
-            ln -s "$CONFIG_DIR/urxvt/ext/urxvt-perls/$f" $HOME/.urxvt/$f
+            ln -s "$CONFIG_DIR/urxvt/ext/urxvt-perls/$f" $HOME/.urxvt/ext/$f
         fi
     done
 
@@ -80,7 +80,7 @@ uninstall() {
     do
         if [ -f "$CONFIG_DIR/urxvt/ext/urxvt-perls/$f" ]; then
             echo "Removing file $f"
-            find $HOME/.urxvt/$f -type l -delete
+            find $HOME/.urxvt/ext/$f -type l -delete
         fi
     done
 
