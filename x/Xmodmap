@@ -1,7 +1,7 @@
 !
 ! Swap Caps_Lock and Control_L
 !
-clear Lock
-remove mod4 = Hyper_L
-keycode 66 = Hyper_L
-add control = Hyper_L
+remove control = Control_L
+remove mod4 = Super_L
+add control = Super_L
+add mod4 = Control_L

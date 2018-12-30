@@ -5,9 +5,6 @@ MAGIC_ANCHOR="Setup by setup_i3.sh"
 
 X_LINK_FILE="xinitrc Xmodmap"
 
-URXVT_THEME="zenburn"
-URXVT_EXT="clipboard keyboard-select url-select"
-
 CRD="chrome-remote-desktop-session"
 
 install() {
@@ -34,25 +31,10 @@ install() {
         fi
     done
 
-    if [ ! -d "$HOME/.urxvt/ext" ]; then
-        mkdir -p "$HOME/.urxvt/ext"
-    fi
-    for f in $(echo $URXVT_EXT)
-    do
-        if [ -f "$CONFIG_DIR/urxvt/ext/urxvt-perls/$f" ]; then
-            echo "Setting up $f"
-
-            ln -s "$CONFIG_DIR/urxvt/ext/urxvt-perls/$f" $HOME/.urxvt/ext/$f
-        fi
-    done
-
     echo "Setting up Xresources"
     echo "! BEGIN: $MAGIC_ANCHOR" >> $HOME/.Xresources
     if [ -f "$CONFIG_DIR/x/Xresources" ]; then
       echo "#include \"$CONFIG_DIR/x/Xresources\"" >> $HOME/.Xresources
-    fi
-    if [ -f "$CONFIG_DIR/x/xresources/$URXVT_THEME" ]; then
-      echo "#include \"$CONFIG_DIR/x/xresources/$URXVT_THEME\"" >> $HOME/.Xresources
     fi
     echo "! END: $MAGIC_ANCHOR" >> $HOME/.Xresources
 }
@@ -73,14 +55,6 @@ uninstall() {
         if [ -f "$CONFIG_DIR/x/$f" ]; then
             echo "Removing file $f"
             find $HOME/.$f -type l -delete
-        fi
-    done
-
-    for f in $(echo $URXVT_EXT)
-    do
-        if [ -f "$CONFIG_DIR/urxvt/ext/urxvt-perls/$f" ]; then
-            echo "Removing file $f"
-            find $HOME/.urxvt/ext/$f -type l -delete
         fi
     done
 
